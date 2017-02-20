@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PasteBinDialog</class>
+ <widget class="QDialog" name="PasteBinDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>283</height>
+   </rect>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="titleLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>381</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Write a title...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>381</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Title</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>381</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Expiration</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="expirationBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>381</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>10 Minutes</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1 Hour</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1 Day</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1 Week</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2 Weeks</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1 Month</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Never</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="privacyBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>381</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Public</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Unlisted</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Privacy</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="syntaxBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>381</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Text</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ActionScript</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ActionScript 3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Asp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Asm</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>AutoHotKey</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>AutoConf</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bash</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Batch</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BrainFuck</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C (WinAPI)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C For Macs</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C Intermediate Language</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C#</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C++</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C++ (WinAPI)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>C++ (with Qt extensions)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CMake</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CoffeeScript</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CSS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Delphi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Email</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Erlang</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>F#</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Game Maker</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Haskell</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>HTML</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>HTML 5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>INI</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Java</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Java 5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>JavaScript</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>jQuery</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>JSON</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Lisp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>LLVM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>LOL Code</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Lua</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Make</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>MySQL</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>newLISP</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nginx</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Objective-C</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>OpenGL Shading</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Oracle 11</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Oracle 8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pascal</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pawn</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Perl</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Perl 6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PHP</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PL/SQL</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PostgreSQL</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Python</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Python for S60</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>QBasic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>QML</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>RBScript</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ruby</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SAS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Scala</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Smalltalk</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Smarty</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SQF</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SQL</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Swift</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>T-SQL</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>UnrealScript</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VB.NET</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VBScript</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VIM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>VisualBasic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>WhiteSpace</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>WHOIS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>XML</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Xorg Config</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>YAML</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Z80 Assembler</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>381</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Syntax Highlighting</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>PasteBinDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>PasteBinDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

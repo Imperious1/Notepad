@@ -1,0 +1,7 @@
+This repository and source is licensed under the ABCN ("Anyone but Commander Nightshady") license.
+
+Note that an additional exception to the license is added, forbidding use/redistribution of said content to his trainees as well, but only when in a 5 mile radius from "Commander Nightshady" or while holding any communication/in-game contact with him.
+
+If you redestribute this software/source/code/program anywhere, it's owner must be explicitly credited.
+
+This license is based off of the ABSE license.
